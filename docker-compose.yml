@@ -1,0 +1,13 @@
+nginx_server:
+  image: nginx:latest
+  links:
+   - web
+  volumes:
+   - ./nginx:/etc/nginx/conf.d
+  ports:
+   - 80
+
+web:
+  image: nginx:latest
+  ports:
+    - 80
